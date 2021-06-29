@@ -1,0 +1,99 @@
+.Navbar{
+    background: #dceafa;
+    height: 10vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: rgb(177, 177, 177);
+    border-width: 5px;
+    border-style: ridge;
+}
+
+#title{
+    font-size: 35px;
+    position: absolute;
+    font-family: sans-serif;
+    margin-top: 4%;
+    left: 3%;
+    color: whitesmoke;
+    animation: title-animation 10s linear infinite;
+}
+
+@keyframes title-animation{
+    0%{color: skyblue;}
+    25%{color: red}
+    50%{color: black;}
+    75%{color: purple;}
+    90%{color: skyblue;}
+}
+
+#item{
+    list-style: none;
+    position: relative;
+    float: right;
+    margin-top: 15%;
+}
+
+#navItem{
+    font-size: 45px;
+    width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    float: right;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+#Nav-ul{
+    position: absolute;
+    right: 0;
+}
+
+#btn{
+    position: relative;
+    width: 200px;
+    height: 35px;
+}
+
+#btn:hover{
+    cursor:pointer;
+}
+
+
+/* Logged in Navigational Menu */
+
+#drop-item{
+    color: black;
+}
+
+#dropdown-menu{
+    height: max-content;
+    margin-top: 8.5rem;
+}
+
+#menu{
+    margin: .25rem 1rem;
+    color: black;
+    font-size: 40px;
+}
+
+#Nav-ul-2{
+    position: absolute;
+    right: 0;
+    margin-right: 2%;
+}
+
+#navItem-2{
+    font-size: 45px;
+    margin: 2.5rem 3rem;
+    width: max-content;
+    font-family: Arial, Helvetica, sans-serif;
+    float: right;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

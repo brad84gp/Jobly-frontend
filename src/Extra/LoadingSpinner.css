@@ -1,0 +1,30 @@
+.LoadingSpinner{
+    margin: 35rem 73rem;
+    width: 150px;
+    height: 150px;
+    border-bottom-style: none;
+    border-top-style: none;
+    border-right: orangered;
+    border-left: royalblue;
+    border-width: 5px;
+    border-right-style: dotted;
+    border-left-style: dotted;
+    border-radius: 55%;
+
+    animation: loading 3s infinite linear;
+}
+
+@keyframes loading{
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

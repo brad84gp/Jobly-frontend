@@ -1,0 +1,23 @@
+.save-state{
+    position: absolute;
+    margin: -20rem 15rem;
+    background-color: black;
+    opacity: .6;
+    width: 500px;
+    height: 300px;
+}
+
+.save-state h2{
+    color: white;
+    text-align: center;
+    margin-top: 7.5rem;
+}
+
+#save-btn{
+    background-color: red;
+    color: white;
+    width: 25px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+}

@@ -1,0 +1,18 @@
+.signup-form{
+    margin: 20rem 50rem;
+    width: min-content;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+#input{
+    width: 1000px;
+    margin-bottom: 3%;
+    
+}
+
+#input:hover{
+    box-shadow: 3px 3px 3px rgb(33, 190, 243),  -3px -3px 3px rgb(33, 190, 243);
+}
