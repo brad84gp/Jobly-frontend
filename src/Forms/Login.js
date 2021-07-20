@@ -1,9 +1,9 @@
-import React, { useContext, useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 
 
 
-import { Form, FormGroup, Label, Input, FormText, Button } from 'reactstrap'
+import { Form, FormGroup, Label, Input, Button, Row, Col } from 'reactstrap'
 import './Register.css'
 
 import JoblyApi from '../API/api'
@@ -14,10 +14,7 @@ const LoginForm = () => {
 
     const history = useHistory()
 
-    const storeValues = useSelector(store=>store)
     const dispatch = useDispatch()
-
-    console.log(storeValues)
 
     const [formData, setFormData] = useState({
         username : '',
@@ -52,20 +49,28 @@ const LoginForm = () => {
 
 
     return (
-        <div className='signup-form'>
-            <Form>
-                <FormGroup>
-                    <Label>Username</Label>
-                    <Input type='text' name='username' id='input' placeholder='Username' value={formData.username} onChange={handleChange} />
-                </FormGroup>
-                <FormGroup>
-                    <Label>Password</Label>
-                    <Input type='password' name='password' id='input' placeholder='password' value={formData.password}  onChange={handleChange} />
-                </FormGroup>
-                <Button color='success' onClick={handleSubmit}>Login</Button>
-            </Form>
+        
+            <Row>
+                <Col lg={2} xl={1}></Col>
 
-        </div>
+                <Col sm={12} lg={8} xl={10}>
+                    <div className='signup-form'>
+                        <Form>
+                            <FormGroup>
+                                <Label>Username</Label>
+                                <Input type='text' name='username' id='input' placeholder='Username' value={formData.username} onChange={handleChange} />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label>Password</Label>
+                                <Input type='password' name='password' id='input' placeholder='password' value={formData.password}  onChange={handleChange} />
+                            </FormGroup>
+                            <Button color='success' onClick={handleSubmit}>Login</Button>
+                        </Form>
+                    </div>
+                </Col>
+
+                <Col lg={2} xl={1}></Col>
+            </Row>
     )
 }
 

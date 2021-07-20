@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router'
 import { useSelector } from 'react-redux'
-import { Button } from 'reactstrap'
+import { Button, Row, Col } from 'reactstrap'
 import './Home.css'
 
 
@@ -24,13 +24,21 @@ const HomePage = () => {
 
     return (
         <div className="home-page-container">
-            <div className="home-page">
-                <h1>WELCOME TO JOBLY, LET US FIND YOU YOUR DREAM JOB!!</h1>
-            </div>
-            <div className="btn-div">
-                <Button color="primary" id="job-btn" onClick={handleClick} >EXPLORE JOBS</Button>
-                {showText ? null : <h4>Login/create account to view jobs!</h4>}
-            </div>
+            <Row>
+                <Col lg={2} xl={1}></Col>
+
+                <Col sm={12} lg={8} xl={10}>
+                    <div className="home-page">
+                        <h1>WELCOME TO JOBLY, LET US FIND YOU YOUR DREAM JOB!!</h1>
+                    </div>
+                    <div className="btn-div">
+                        <Button color="primary" id="job-btn" onClick={handleClick} >EXPLORE JOBS</Button>
+                        {showText ? null : <h4>Login/create account to view jobs!</h4>}
+                    </div>
+                </Col>
+
+                <Col lg={2} xl={1}></Col>
+            </Row>
         </div>
         
     )

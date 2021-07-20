@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router'
 import { useSelector } from 'react-redux'
 
-import { Form, FormGroup, Label, Input, FormText, Button, Alert } from 'reactstrap'
+import { Form, FormGroup, Label, Input, Button, Row, Col } from 'reactstrap'
 
 import UserContext from '../ReactContext'
 import JoblyApi from '../API/api'
@@ -62,32 +61,41 @@ const UserProfile = () => {
 
 
     return(
-        <div className='profile-info'>
-            <Form>
-                <FormGroup>
-                    <Label>Firstname</Label>
-                    <Input id="input" type='text' name='firstName' value={profile.firstName} onChange={handleChange}  readOnly={true}/>
-                </FormGroup>
-                <FormGroup>
-                    <Label>Lastname</Label>
-                    <Input id="input" type='text' name='lastName' value={profile.lastName} onChange={handleChange}  readOnly={true}/>
-                </FormGroup>
-                <FormGroup>
-                    <Label>Email</Label>
-                    <Input id="input" type='email' name='email' value={profile.email} onChange={handleChange}  readOnly={true}/>
-                </FormGroup>
-                <FormGroup>
-                    <Label>Password</Label>
-                    <Input id="input" type='password' name='password' defaultValue={profile.password} onChange={handleChange} readOnly={true}/>
-                </FormGroup>
-                <Button onClick={enableEdit} color='primary'>Edit</Button>
-                <UserContext.Provider value={{success, setSuccess}}>
-                    <SavedState />
-                </UserContext.Provider>
-                {submit ? <Button id="btn-2" color='success' onClick={handleSubmit}>Submit</Button> : null}
-                
-            </Form>
-        </div>
+        
+            <Row>
+                <Col lg={2}></Col>
+
+                <Col sm={12} lg={8}>
+                    <div className='profile-info'>
+                        <Form>
+                            <FormGroup>
+                                <Label>Firstname</Label>
+                                <Input id="input" type='text' name='firstName' value={profile.firstName} onChange={handleChange}  readOnly={true}/>
+                            </FormGroup>
+                            <FormGroup>
+                                <Label>Lastname</Label>
+                                <Input id="input" type='text' name='lastName' value={profile.lastName} onChange={handleChange}  readOnly={true}/>
+                            </FormGroup>
+                            <FormGroup>
+                                <Label>Email</Label>
+                                <Input id="input" type='email' name='email' value={profile.email} onChange={handleChange}  readOnly={true}/>
+                            </FormGroup>
+                            <FormGroup>
+                                <Label>Password</Label>
+                                <Input id="input" type='password' name='password' defaultValue={profile.password} onChange={handleChange} readOnly={true}/>
+                            </FormGroup>
+                            <Button onClick={enableEdit} color='primary'>Edit</Button>
+                            <UserContext.Provider value={{success, setSuccess}}>
+                                <SavedState />
+                            </UserContext.Provider>
+                            {submit ? <Button id="btn-2" color='success' onClick={handleSubmit}>Submit</Button> : null}
+                        </Form>
+                    </div>
+
+                </Col>
+
+                <Col lg={2}></Col>
+            </Row>
     )
 }
 

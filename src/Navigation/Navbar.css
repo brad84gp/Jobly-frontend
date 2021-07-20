@@ -1,99 +1,170 @@
-.Navbar{
-    background: #dceafa;
-    height: 10vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    border: rgb(177, 177, 177);
-    border-width: 5px;
-    border-style: ridge;
-}
+@media screen and (min-width: 500px) {
+    .Navbar{
+        height: 150px;
+        width: 100%;
+    }
+    
+    #title{
+        font-size: 45px;
+    }
 
-#title{
-    font-size: 35px;
-    position: absolute;
-    font-family: sans-serif;
-    margin-top: 4%;
-    left: 3%;
-    color: whitesmoke;
-    animation: title-animation 10s linear infinite;
-}
+    #Nav-ul{
+        margin-top: 3%;
 
-@keyframes title-animation{
-    0%{color: skyblue;}
-    25%{color: red}
-    50%{color: black;}
-    75%{color: purple;}
-    90%{color: skyblue;}
-}
+    }
 
-#item{
-    list-style: none;
-    position: relative;
-    float: right;
-    margin-top: 15%;
-}
+    #login-item{
+        position: relative;
+        margin: 2em;
+    } 
+    
+    #signup-item{
+       position: relative;
+       margin: 2em;
+    }
+    
+    #login-btn, #signup-btn{
+        width: 100px;
+    }
 
-#navItem{
-    font-size: 45px;
-    width: 300px;
-    font-family: Arial, Helvetica, sans-serif;
-    float: right;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
+    #companies-item, #jobs-item{
+        color: black;
+        text-decoration: none;
+    } 
 
-#Nav-ul{
-    position: absolute;
-    right: 0;
-}
+    #dropdown-menu{
+        margin-top: -.4rem;
+        text-decoration: none;
+        color: black;
+    }
 
-#btn{
-    position: relative;
-    width: 200px;
-    height: 35px;
-}
-
-#btn:hover{
-    cursor:pointer;
+    #logged-in-nav{
+        text-align: center;
+    }
+    
 }
 
 
-/* Logged in Navigational Menu */
+@media screen and (min-width: 770px) {
+    .Navbar{
+        height: 150px;
+        width: 100%;
+    }
+    
+    #title{
+        font-size: 45px;
+        margin-top: 2%;
+    }
 
-#drop-item{
-    color: black;
+    #Nav-ul{
+        margin-top: 5%;
+        position: absolute;
+        right: 2%
+
+    }
+
+    #login-item, #signup-item{
+        position: relative;
+        margin: 2em;
+        display: inline-flex;
+        justify-self: right;
+    } 
+    
+    #login-btn, #signup-btn{
+        width: 100px;
+    }
+    
+    #companies-item, #jobs-item{
+        position: relative;
+        font-size: 20px;
+        margin: auto 2em;
+        float: right;
+        text-decoration: none;
+    } 
+
+    #dropdown-menu{
+        position: relative;
+        font-size: 20px;
+        margin-top: -.4rem;
+        float: right;
+        text-decoration: none;
+    }
+
+    #logged-in-nav{
+        text-align: center;
+        position: absolute;
+        right: 5%;
+    }
 }
 
-#dropdown-menu{
-    height: max-content;
-    margin-top: 8.5rem;
+@media screen and (min-width: 990px) {
+    .Navbar{
+        height: 150px;
+        width: 100%;
+    }
+    
+    #title{
+        font-size: 45px;
+        margin-top: 2%;
+    }
+
+    #Nav-ul-2{
+        margin-top: 2%;
+        position: absolute;
+        right: 2%
+    }
+
+    #Nav-ul{
+        margin-top: 2%;
+        position: absolute;
+        right: 2%
+
+    }
+
+    #login-item, #signup-item{
+        position: relative;
+        margin: 2em;
+        display: inline-flex;
+        justify-self: right;
+    } 
+    
+   
+    
+    #login-btn, #signup-btn{
+        width: 100px;
+    }
+    
 }
 
-#menu{
-    margin: .25rem 1rem;
-    color: black;
-    font-size: 40px;
-}
+@media screen and (min-width: 1300px) {
+    .Navbar{
+        height: 150px;
+        width: 100%;
+    }
+    
+    #title{
+        font-size: 45px;
+        margin-top: 1%;
+    }
 
-#Nav-ul-2{
-    position: absolute;
-    right: 0;
-    margin-right: 2%;
-}
+    #Nav-ul{
+        margin-top: 1%;
+        position: absolute;
+        right: 2%
 
-#navItem-2{
-    font-size: 45px;
-    margin: 2.5rem 3rem;
-    width: max-content;
-    font-family: Arial, Helvetica, sans-serif;
-    float: right;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
+    }
 
-a{
-    text-decoration: none;
-    color: black;
+    #login-item, #signup-item{
+        position: relative;
+        margin: 2em;
+        display: inline-flex;
+        justify-self: right;
+    } 
+    
+   
+    
+    #login-btn, #signup-btn{
+        width: 100px;
+    }
+    
 }

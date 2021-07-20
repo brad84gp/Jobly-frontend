@@ -1,6 +1,7 @@
 import React, { useState} from 'react'
 import {NavLink, useHistory} from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
+
 import { Navbar, NavbarBrand, Nav, NavItem, Collapse, NavbarToggler, Button, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
 
 
@@ -31,22 +32,22 @@ const Navlinks = () => {
     const UserLoggedIn = () => {
         return(
             <div className="Navbar">
-                <Navbar expand='md'>
+                <Navbar color="info" light expand='md'>
                     <NavbarBrand id="title"href="/">React-Jobly</NavbarBrand>
                     <NavbarToggler onClick={toggle} />
                     <Collapse isOpen={isOpen} navbar>
-                        <Nav className="mr-auto" navbar id="Nav-ul-2">
+                        <Nav className="mr-auto" navbar id="logged-in-nav" >
                             <NavItem id="item">
-                                <NavLink id="navItem-2" to="/companies">Companies</NavLink>
+                                <NavLink id="companies-item" to="/companies">Companies</NavLink>
                             </NavItem>
                             <NavItem id="item">
-                                <NavLink  id="navItem-2" to="/jobs">Jobs</NavLink>
+                                <NavLink  id="jobs-item" to="/jobs">Jobs</NavLink>
                             </NavItem>
-                            <UncontrolledDropdown id="dropdown-menu">
+                            <UncontrolledDropdown id="dropdown-menu" nav inNavbar>
                                 <DropdownToggle nav caret id="menu">
                                     Menu
                                 </DropdownToggle>
-                                <DropdownMenu right  >
+                                <DropdownMenu style={{textAlign : 'center'}}>
                                     <DropdownItem id="drop-item">
                                         <a onClick={toProfile}>Profile</a>
                                     </DropdownItem>
@@ -69,10 +70,11 @@ const Navlinks = () => {
                     <NavbarBrand id="title" to="/">React-Jobly</NavbarBrand>
                     <Nav className="mr-auto" navbar id="Nav-ul">
                         <NavItem id="item">
-                            <NavLink id="navItem" to="/login"><Button color="primary" id="btn">Login</Button></NavLink>
+                            <NavLink id="login-item" to="/login"><Button color="primary" id="login-btn">Login</Button></NavLink>
                         </NavItem>
+                        <br></br>
                         <NavItem id="item">
-                            <NavLink id="navItem" to="/signup"><Button color="primary" id="btn">Sign Up</Button></NavLink>
+                            <NavLink id="signup-item" to="/signup"><Button color="primary" id="signup-btn">Sign Up</Button></NavLink>
                         </NavItem>
                     </Nav>
                 </Navbar>

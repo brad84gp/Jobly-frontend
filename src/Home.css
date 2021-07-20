@@ -1,39 +1,17 @@
-.home-page-container{
-    position: absolute;
-    margin-top: 135px;
-    padding-top: .1%;
-    left: 0;
-}
+@media screen and (min-width: 500px) {
+    .home-page-container{
+        margin-top: 400px;
+    }
 
+    .home-page h1{
+        text-align: center;
+    }
 
-.home-page{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    background-color: rgb(235, 235, 235);
-    width: 100vw;
-    height: 90vh;
-}
+    .btn-div{
+        display: flex;
+    }
 
-h1{
-    margin: auto;
-    font-family:sans-serif;
-}
-
-.btn-div{
-    position: absolute;
-    margin: 43rem 70rem;
-
-}
-
-#job-btn{
-    height: 40px;
-    width: 300px;
-}
-
-.btn-div h4{
-    width: max-content;
-    text-align: center;
-    margin-left: -10%;
-    margin-top: 3%;
+    #job-btn{
+        margin: 2rem auto;
+    }
 }
