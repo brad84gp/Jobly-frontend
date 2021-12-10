@@ -66,7 +66,7 @@ const Navlinks = () => {
     const UserNotLoggedIn = () => {
         return(
             <div className="Navbar">
-                <Navbar expand='md'>
+                <Navbar color="info" light expand='md'>
                     <NavbarBrand id="title" to="/">React-Jobly</NavbarBrand>
                     <Nav className="mr-auto" navbar id="Nav-ul">
                         <NavItem id="item">

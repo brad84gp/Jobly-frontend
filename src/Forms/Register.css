@@ -1,14 +1,14 @@
 .signup-form{
     margin: 5em auto;
-    width: min-content;
-    padding: 2%;
+    padding: 3%;
+    width: 400px;
     display: flex;
     justify-content: center;
     border: 1px solid black;
 }
 
 #input{
-    width: 1000px;
+    width: max-content;
     margin-bottom: 3%;
     
 }
